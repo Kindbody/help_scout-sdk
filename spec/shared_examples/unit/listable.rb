@@ -13,8 +13,8 @@ RSpec.shared_examples 'listable unit' do |url|
       expect(subject).to all(be_a(described_class))
     end
 
-    context 'when page set' do
-      subject { described_class.list(page: 2) }
+    context 'when params set' do
+      subject { described_class.list(params: { page: 2 }) }
       let(:body) { file_fixture("#{model_name}/list.json") }
 
       before do
