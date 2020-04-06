@@ -2,8 +2,8 @@
 
 module HelpScout
   module Getable
-    def get(id)
-      new parse_item(HelpScout.api.get(get_path(id)))
+    def get(id, params={})
+      new parse_item(HelpScout.api.get(get_path(id), params))
     end
 
     private
